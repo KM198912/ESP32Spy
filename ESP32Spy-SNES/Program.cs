@@ -18,18 +18,53 @@ namespace SESP32SpySNES
                 string a = _serialPort.ReadExisting();
                 if (!string.IsNullOrEmpty(a))
                 {
-                    int buttons = int.Parse(a);
-                    switch(buttons)
+                    switch(a)
                     {
-                        case 3:
-                            Console.WriteLine("Start Pressed");
-                            break;
-                        case 0:
+                        case "0":
                             Console.WriteLine("B Pressed");
                             break;
-                        case 8:
+                        case "1":
+                            Console.WriteLine("Y Pressed");
+                            break;
+                        case "2":
+                            Console.WriteLine("SELECT Pressed");
+                            break;
+                        case "3":
+                            Console.WriteLine("START Pressed");
+                            break;
+                        case "4":
+                            Console.WriteLine("UP Pressed");
+                            break;
+                        case "5":
+                            Console.WriteLine("DOWN Pressed");
+                            break;
+                        case "6":
+                            Console.WriteLine("LEFT Pressed");
+                            break;
+                        case "7":
+                            Console.WriteLine("RIGHT Pressed");
+                            break;
+                        case "8":
                             Console.WriteLine("A Pressed");
                             break;
+                        case "9":
+                            Console.WriteLine("X Pressed");
+                            break;
+                        case "Left":
+                            Console.WriteLine("L Pressed");
+                            break;
+                        case "Right":
+                            Console.WriteLine("R Pressed");
+                            break;
+
+
+
+
+
+
+
+
+
                         default:
                             break;
                     }
