@@ -19,3 +19,10 @@ The SNES Pinout is relative easy:
 - Latch Pin goes to Pin 17
 - 5v goes to 3,3V
 - GND goes to any GND Pin
+
+
+## Setup: ##
+- Flash the .ino file in nintendospy_esp32 to your ESP32 using your favourite flasher.
+- Compile the solution using Visual Studio 2019 (2022 not tested, but should work fine)
+- Copy ESP32Spy.ini.example to the bin directory as ESP32Spy.ini and adjust the COM Port
+

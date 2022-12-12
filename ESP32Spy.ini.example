@@ -1,0 +1,3 @@
+[Config]
+COM_PORT = COM6
+BaudRate = 115200
