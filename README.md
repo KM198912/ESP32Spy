@@ -14,8 +14,8 @@ The SNES Pinout is relative easy:
 
 ![SNES/NES Lyout](https://cdn.discordapp.com/attachments/780070569038708767/1051233113239461922/NesSnesPinout.png)
 
-Clock Pin goes to Pin 22
-Data Pin goes to Pin 21
-Latch Pin goes to Pin 17
-5v goes to 3,3V
-GND goes to any GND Pin
+- Clock Pin goes to Pin 22
+- Data Pin goes to Pin 21
+- Latch Pin goes to Pin 17
+- 5v goes to 3,3V
+- GND goes to any GND Pin
