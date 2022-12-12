@@ -15,7 +15,8 @@ namespace SESP32SpySNES
              _source = new IniConfigSource("ESP32Spy.ini");
             string com_port = _source.Configs["Config"].Get("COM_PORT");
             int baud = _source.Configs["Config"].GetInt("BaudRate");
-            if (SerialPort.GetPortNames().ToList().Contains(com_port))
+            bool portExists = SerialPort.GetPortNames().Any(x => x == com_port);
+            if (portExists)
             {
                 _serialPort = new SerialPort();
             _serialPort.PortName =com_port;
@@ -80,11 +81,12 @@ namespace SESP32SpySNES
                                 break;
                         }
                     }
-                    else
-                    {
-                        throw new Exception("Failed to open COM Port: " + com_port);
-                    }
+
                 }
+            }
+            else
+            {
+                throw new Exception("Failed to open COM Port: " + com_port);
             }
         }
     }
